@@ -1,0 +1,78 @@
+#table {
+  border-radius: 4px;
+  border: 1px solid #afb1b7;
+}
+#table > thead > tr {
+  background-color: #222326;
+  color: #efeff1;
+  border-bottom: 1px solid #afb1b7;
+}
+#table > thead > tr > th {
+  text-transform: uppercase;
+  padding: 0.7rem 0.6rem;
+}
+#table > tbody > tr > td:not(:last-child) {
+  padding: 0.7rem 0.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 7.5rem;
+}
+#table > tbody > tr > td:last-child {
+  padding: 0.6rem;
+  font-size: 13px;
+}
+#table > tbody > tr {
+  border-bottom: 1px solid #afb1b7;
+}
+
+.spinner {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 6px solid var(--neutral-100);
+  border-right-color: var(--neutral-800);
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.paginatedBtnsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.paginatedBtnsLi {
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-400);
+  color: var(--neutral-900);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+}
+
+.paginatedBtnsLi.selected {
+  border: 2px solid var(--neutral-900);
+  background: var(--primary-1000);
+}
+
+.paginatedBtnsContainer > :where(.previous, .next) {
+  color: var(--neutral-200);
+}
+
+.break {
+  color: var(--primary-400);
+}
